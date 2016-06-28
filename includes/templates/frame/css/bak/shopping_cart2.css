@@ -1,0 +1,33 @@
+.cartDiscount {
+	border-top: 1px solid #cccccc;
+	font-weight: bold;
+	text-align: right;
+	line-height: 2.2em;
+	padding-right: 2.5em;
+	background-color: #e9e9e9;
+	height: 2.2em;
+}
+.checkoutCandy {
+	line-height: 2.4em;
+	font-weight: bold;
+	padding: 0.4em;
+	border: 1px solid #9a9a9a;
+	background-color: #ffffcc;
+	color: #000000;
+}
+
+#cartNewSubTotal {
+	background-color: #e9e9e9;
+	 }
+
+#cartNewSubTotal {
+	border-top: 1px solid #cccccc;
+	font-weight: bold;
+	text-align: right;
+	line-height: 2.2em;
+	padding-right: 2.5em;
+	}
+
+#cartNewSubTotal {
+	height: 2.2em;
+	}

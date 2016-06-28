@@ -4,10 +4,11 @@
  * Defines the filenames used in the project
  *
  * @package general
- * @copyright Copyright 2003-2016 Zen Cart Development Team
+ * @copyright Copyright 2003-2011 Zen Cart Development Team
  * @copyright Portions Copyright 2003 osCommerce
  * @license http://www.zen-cart.com/license/2_0.txt GNU Public License V2.0
- * @version $Id: Author: DrByte  Sat Oct 17 21:54:07 2015 -0400 Modified in v1.5.5 $
+ * @version $Id: filenames.php 19690 2011-10-04 16:41:45Z drbyte $
+ * @version $Id: Integrated COWOA v2.4  - 2007 - 2013
  * @private
  */
 /**
@@ -103,6 +104,7 @@ define('FILENAME_ORDERS', 'orders');
 define('FILENAME_ORDERS_INVOICE', 'invoice');
 define('FILENAME_ORDERS_PACKINGSLIP', 'packingslip');
 define('FILENAME_ORDERS_STATUS', 'orders_status');
+define('FILENAME_ORDER_STATUS', 'order_status');
 define('FILENAME_OPTIONS_NAME_MANAGER', 'options_name_manager');
 define('FILENAME_OPTIONS_VALUES_MANAGER', 'options_values_manager');
 define('FILENAME_PAGE_NOT_FOUND', 'page_not_found');
@@ -188,3 +190,4 @@ define('FILENAME_PRODUCTS_DISCOUNT_PRICES','products_discount_prices.php');
 define('FILENAME_SPECIALS_INDEX', 'specials_index.php');
 define('FILENAME_UPCOMING_PRODUCTS', 'upcoming_products.php');
 
+define('FILENAME_BB_INDEX', 'index.php'); // phpBB main index filename
