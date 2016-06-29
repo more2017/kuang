@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-3 hidden-xs">.col-md-6</div>
+  <div class="col-xs-12 col-md-9 ">.col-md-6</div>
+</div>
+
+<div id="">
+</div>
+
+<div class="container">
+  ...
+</div>
+
+<div class="row">
+  <div class="col-md-8">.col-md-8</div>
+  <div class="col-md-4">.col-md-4</div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-3">.col-md-4</div>
+  <div class="col-md-3 hidden-xs">.col-md-4</div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-md-6">.col-md-4</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php require(DIR_WS_MODULES . 'sideboxes/currencies_header.php'); ?>

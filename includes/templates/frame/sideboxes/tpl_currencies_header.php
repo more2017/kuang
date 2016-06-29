@@ -39,17 +39,17 @@ $content .='<div class="topcurrencies">';
 $content .='<ul class="lcurrence">';
 $content .='<li id="dollar">';
 $content .='<a href="#currence" rel="nofollow">';
-$content .='<b>Monedas: </b>';
+$content .='<b>Currencies: </b>';
 $content .='<u>';
 $content .='<em>'.$_SESSION['currency'].'</em>';
 $content .='</u>';
-$content .='<img align="absmiddle" hspace="3" border="0" src="images/flag/'.$_SESSION['currency'].'.gif">';
+//$content .='<img align="absmiddle" hspace="3" border="0" src="images/flag/'.$_SESSION['currency'].'.gif">';
 $content .='</a>';
 $content .='<ul class="pcurrence">';
 foreach($currencies_array as $v){ 
 if($_SESSION['currency']!=$v['id']){
 $content .='<li>';
-$content .='<img border="0" src="images/flag/'.$v["id"].'.gif">';
+//$content .='<img border="0" src="images/flag/'.$v["id"].'.gif">';
 $content .='<a href="javascript:submit_value(\''.$v["id"].'\')" rel="nofollow">';
 $content.=$v["text"].'</a>';
 $content .='</li>';

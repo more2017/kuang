@@ -41,10 +41,14 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 ?>
 
 <div id="headerWrapper">
-<!--bof-navigation display-->
-<div id="navMainWrapper">
-<div id="navMain">
-    <ul class="back">
+
+<div id="headerTop">
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 col-md-4"><?php require(DIR_WS_MODULES . 'sideboxes/currencies_header.php'); ?></div>
+  <div class="col-md-8 hidden-xs">
+  <div id="navMain">
+    <ul class="list-inline">
     <li><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">'; ?><?php echo HEADER_TITLE_CATALOG; ?></a></li>
 	<?php if (($_SESSION['customer_id']) && (!$_SESSION['COWOA']=='True')) { ?>
     <li><a href="<?php echo zen_href_link(FILENAME_LOGOFF, '', 'SSL'); ?>"><?php echo HEADER_TITLE_LOGOFF; ?></a></li>
@@ -62,48 +66,29 @@ if (!isset($flag_disable_header) || !$flag_disable_header) {
 <?php }?>
 </ul>
 </div>
-<div id="navMainSearch"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?></div>
-<br class="clearBoth" />
 </div>
-<!--eof-navigation display-->
-
-<!--bof-branding display-->
-<div id="logoWrapper">
-    <div id="logo"><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?></div>
-<?php if (HEADER_SALES_TEXT != '' || (SHOW_BANNERS_GROUP_SET2 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET2))) { ?>
-    <div id="taglineWrapper">
-<?php
-              if (HEADER_SALES_TEXT != '') {
-?>
-      <div id="tagline"><?php echo HEADER_SALES_TEXT;?></div>
-<?php
-              }
-?>
-<?php
-              if (SHOW_BANNERS_GROUP_SET2 != '' && $banner = zen_banner_exists('dynamic', SHOW_BANNERS_GROUP_SET2)) {
-                if ($banner->RecordCount() > 0) {
-?>
-      <div id="bannerTwo" class="banners"><?php echo zen_display_banner('static', $banner);?></div>
-<?php
-                }
-              }
-?>
-    </div>
-<?php } // no HEADER_SALES_TEXT or SHOW_BANNERS_GROUP_SET2 ?>
 </div>
-<br class="clearBoth" />
-<!--eof-branding display-->
+</div>
+</div>
 
-<!--eof-header logo and navigation display-->
+<div id="headerMiddle">
+<div class="container">
+<div class="row">
+  <div class="col-md-3"><div id="logo"><?php echo '<a href="' . HTTP_SERVER . DIR_WS_CATALOG . '">' . zen_image($template->get_template_dir(HEADER_LOGO_IMAGE, DIR_WS_TEMPLATE, $current_page_base,'images'). '/' . HEADER_LOGO_IMAGE, HEADER_ALT_TEXT) . '</a>'; ?></div></div>
+  <div class="col-md-3 hidden-xs"><div id="tagline"><?php echo HEADER_SALES_TEXT;?></div></div>
+  <div class="clearfix visible-xs-block"></div>
+  <div class="col-md-6"><div id="navMainSearch"><?php require(DIR_WS_MODULES . 'sideboxes/search_header.php'); ?></div></div>
+</div>
+</div>
+</div>
 
-<!--bof-optional categories tabs navigation display-->
-<?php require($template->get_template_dir('tpl_modules_categories_tabs.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_modules_categories_tabs.php'); ?>
-<!--eof-optional categories tabs navigation display-->
 
-<!--bof-header ezpage links-->
+<div id="headerNav">
 <?php if (EZPAGES_STATUS_HEADER == '1' or (EZPAGES_STATUS_HEADER == '2' and (strstr(EXCLUDE_ADMIN_IP_FOR_MAINTENANCE, $_SERVER['REMOTE_ADDR'])))) { ?>
 <?php require($template->get_template_dir('tpl_ezpages_bar_header.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_ezpages_bar_header.php'); ?>
 <?php } ?>
-<!--eof-header ezpage links-->
+</div>
+
+
 </div>
 <?php } ?>
